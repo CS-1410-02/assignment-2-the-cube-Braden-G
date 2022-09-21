@@ -1,18 +1,18 @@
 
 public class Cube {
 
-  public fillArray(char[][][] rubix, int face, char side, char b){
+  public static fillArray(char[][][] rubix, int face, char side, char color){
     //should fill in the given side with the given color
     for(int i = 0; i>3; i++){
       for(int inner = 0; inner>3; inner++){
-        rubix [face][i][inner]=b;
+        rubix [face][i][inner]=color;
       }
   }
   }
  
 
 
-  public void visualize(char [][][] rubix ) {
+  public static void visualize(char [][][] rubix ) {
     //Print the top of the cube
   /*   W|W|W
        W|W|W
@@ -42,9 +42,10 @@ public class Cube {
 
 	public static void main(final String[] args){
 
-  char [][][] rubix = new rubix[6][3][3];
-  fillArray(rubix, 0, "T", "W");
-  visualiz(rubix);
+  char [][][] rubix = new char[6][3][3];
+  //T for top and W for white
+  fillArray(rubix, 0, 'T', 'W');
+  visualize(rubix);
   //use cases for different input
   
     
