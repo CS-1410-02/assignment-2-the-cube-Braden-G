@@ -247,6 +247,7 @@ public class Cube {
           rubix[4][2][0] = temp[2][0];
           rubix[4][2][1] = temp[2][1];
           rubix[4][2][2] = temp[2][2];
+          break;
 
         case "r":
         //done
