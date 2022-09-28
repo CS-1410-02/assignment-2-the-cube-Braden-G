@@ -4,11 +4,11 @@ import java.io.InputStreamReader;
 
 public class Cube {
 
-  public static void fillArray(char[][][] rubix, int face, char side, char color) {
-    // should fill in the given side with the given color
-    for (int i = 0; i < 3; i++) {
-      for (int inner = 0; inner < 3; inner++) {
-        rubix[face][i][inner] = color;
+  public static void fillArray(char[][][] rubix, int face, char side, char color){
+    //should fill in the given side with the given color
+    for(int i = 0; i<3; i++){
+      for(int inner = 0; inner<3; inner++){
+        rubix [face][i][inner]=color;
       }
     }
   }
