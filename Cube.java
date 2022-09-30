@@ -2,7 +2,11 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import java.util.ArrayList;
+
 public class Cube {
+
+  static ArrayList<String> stack = new ArrayList<>();
 
   public static void fillArray(char[][][] rubix, int face, char side, char color){
     //should fill in the given side with the given color
@@ -69,7 +73,7 @@ public class Cube {
 
     while (run) {
       visualize(rubix);
-      System.out.print("Possible moves: u, d, r, l, f, b and u', d', r', l', f', b' \nPress q to quit\n");
+      System.out.print("Possible moves: u, d, r, l, f, b and u', d', r', l', f', b' or s to see solution \nPress q to quit\n");
 
       if (!argscheck) {
         input = reader.readLine();
@@ -82,6 +86,9 @@ public class Cube {
           argsRunIndex++;
         }
       }
+
+      if((input != "e") && (input != "s"))
+        stack.add((input.contains("'") ? input : input+"'"));
 
       switch (input) {
         case "u":
@@ -574,6 +581,12 @@ public class Cube {
         case "q":
           run = false;
           break;
+        case "s":
+        System.out.println("To solve: ");
+          for(int i=stack.size()-1; i>0; i--){
+            System.out.print(stack.get(i-1)+" ");
+          }
+          System.out.println();
 
       }
 
