@@ -4,6 +4,15 @@ import java.io.InputStreamReader;
 
 import java.util.ArrayList;
 
+
+//Feedback: 
+//  Looks Good, functions well, well commented. I would say that if I ran into this code in the real world I wouldn't have any issue jumping into it and adding to it.
+//  It didn't really match the output from the assignment which was, more or less, picked to make people create a getFace type function on return but I understand 
+//  why you didn't go that route and wouldn't penalize for it. I would also say it may be a hundred or so lines longer than it must be. It's possible that this might
+//  actually speed up your code but for example on your visualize function: (continued on line 37)
+// 
+// 
+
 public class Cube {
 
   static ArrayList<String> stack = new ArrayList<>();
@@ -24,6 +33,10 @@ public class Cube {
      * W|W|W
      * W|W|W
      */
+
+    //Moving this functionality into a for loop to cut down on redundent lines and even increase readability would be good. 
+    //You could see how if you were specifically trying to understand what face you are adding when in this code block below 
+    //it may take longer for someone new to this codebase than it needs to.
     System.out.println("      " + rubix[0][0][0] + "|" + rubix[0][0][1] + "|" + rubix[0][0][2]);
     System.out.println("      " + rubix[0][1][0] + "|" + rubix[0][1][1] + "|" + rubix[0][1][2]);
     System.out.println("      " + rubix[0][2][0] + "|" + rubix[0][2][1] + "|" + rubix[0][2][2]);
